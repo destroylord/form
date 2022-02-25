@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+label {
+    display: block;
+}
+
+input,
+select {
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0 5px;
+}
+
+input,
+select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form {
+    max-width: 275px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.form .form-group {
+    margin-top: 15px;
+}
+
+.form .input-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form .input-group input {
+    width: 49%;
+}
+
+.form .form-group button {
+    padding: 5px 8px;
+    float: right;
+}
+  
