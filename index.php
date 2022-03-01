@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form action="message-success.php" method="post" class="form">
+    <form action="mail.php" method="post" class="form">
         <div class="form-group">
             <label for="firstname">Name</label>
             <div class="input-group">
