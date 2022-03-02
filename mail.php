@@ -6,39 +6,34 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-// require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
-require('PHPMailer/Exception.php');
-require('PHPMailer/SMTP.php');
-require('PHPMailer/PHPMailer.php');
+// $fname = $_POST['firstname'];
+// $lname = $_POST['lastname'];
 
-
-$fname = $_POST['firstname'];
-$lname = $_POST['lastname'];
-
-$email = $_POST['email'];
+// $email = $_POST['email'];
 
 //Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+$mail = new PHPMailer();
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.mailtrap.io';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'a880d2e7496976';                     //SMTP username
     $mail->Password   = 'c62563e84c6f63';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 2525;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+    $mail->addAddress('joe@example.net', 'John Doe');     //Add a recipient
+    // $mail->addAddress('ellen@example.com');               //Name is optional
+    // $mail->addReplyTo('info@example.com', 'Information');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
 
     //Attachments
     // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
